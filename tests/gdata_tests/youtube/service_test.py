@@ -18,7 +18,7 @@ __author__ = 'api.jhartmann@gmail.com (Jochen Hartmann)'
 
 import getpass
 import time
-import StringIO
+import io
 import random
 import unittest
 import atom
@@ -568,9 +568,9 @@ class YouTubeServiceTest(unittest.TestCase):
 if __name__ == '__main__':
   print ('NOTE: Please run these tests only with a test account. '
          'The tests may delete or update your data.')
-  username = raw_input('Please enter your username: ')
+  username = eval(input('Please enter your username: '))
   password = getpass.getpass()
-  developer_key = raw_input('Please enter your developer key: ')
-  video_file_location = raw_input(
-      'Please enter the absolute path to a video file: ')
+  developer_key = eval(input('Please enter your developer key: '))
+  video_file_location = eval(input(
+      'Please enter the absolute path to a video file: '))
   unittest.main()
